@@ -1,0 +1,9 @@
+<app-to-do-list
+  [todos]="tasks"
+  *ngIf="listPage"
+  (addNewToDoButtonClicked)="showNewToDoForm()">
+</app-to-do-list>
+<app-create
+  *ngIf="formPage"
+  (addNewToDo)="onToDoAdded($event)">
+</app-create>
